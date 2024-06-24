@@ -1,9 +1,5 @@
 from typing import Optional
-
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+from ListNode import ListNode
 
 class MergeTwoSortedLists:
     def __init__(self, list1: Optional[ListNode], list2: Optional[ListNode]):

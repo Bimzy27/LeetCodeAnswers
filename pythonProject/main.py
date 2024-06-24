@@ -1,11 +1,7 @@
-from Easy.NumberOfRecentCalls import NumberOfRecentCalls
+from ListNode import ListNodeHelper
+from Medium.AddTwoNumbers import AddTwoNumbers
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    main = NumberOfRecentCalls()
-    main.ping(1)
-    main.ping(100)
-    main.ping(3001)
-    main.ping(3002)
-
-
+    node1 = ListNodeHelper.GetListNodeFromList([2, 4, 3])
+    node2 = ListNodeHelper.GetListNodeFromList([5, 6, 4])
+    main = AddTwoNumbers(node1, node2)
