@@ -1,7 +1,6 @@
 from Medium.AsteroidCollision import AsteroidCollision
+from Medium.DecodeString import DecodeString
 
 if __name__ == '__main__':
-    main = AsteroidCollision([10,2,-5])
-    main = AsteroidCollision([8,-8])
-    main = AsteroidCollision([5,10,-5])
-    main = AsteroidCollision([-2,-1,1,2])
+    main = DecodeString("13[a]2[bc]")
+    main = DecodeString("3[a2[c]]")
