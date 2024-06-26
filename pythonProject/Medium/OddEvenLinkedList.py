@@ -1,12 +1,13 @@
 from typing import Optional, List
+
 from ListNode import ListNode
 from LogHelper import LogHelper
 
 
-class DeleteMiddleNodeLinkedList:
+class OddEvenLinkedList:
     def __init__(self, head: Optional[ListNode]):
         LogHelper.PrintInput(head)
-        LogHelper.PrintOutput(self.deleteMiddle(head))
+        LogHelper.PrintOutput(self.oddEvenList(head))
 
     def GetListNodeFromList(self, nums: List[int]) -> Optional[ListNode]:
         head = None
@@ -21,13 +22,18 @@ class DeleteMiddleNodeLinkedList:
                 tail = new_node
         return head
 
-    def deleteMiddle(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        nodes = []
+    def oddEvenList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        even = []
+        odd = []
+
+        index = 0
         while head is not None:
-            nodes.append(head.val)
-            print("head: " + str(head.val))
+            if index % 2 == 0: # even
+                even.append(head.val)
+            else:
+                odd.append(head.val)
+
             head = head.next
+            index += 1
 
-        nodes.pop(int(len(nodes) / 2))
-
-        return self.GetListNodeFromList(nodes)
+        return self.GetListNodeFromList(even + odd)

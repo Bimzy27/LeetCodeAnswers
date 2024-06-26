@@ -1,6 +1,5 @@
 from ListNode import ListNodeHelper
-from Medium.DeleteMiddleNodeLinkedList import DeleteMiddleNodeLinkedList
-from TreeNode import TreeNodeHelper
+from Medium.OddEvenLinkedList import OddEvenLinkedList
 
 if __name__ == '__main__':
-    main = DeleteMiddleNodeLinkedList(ListNodeHelper.GetListNodeFromList([1,3,4,7,1,2,6]))
+    main = OddEvenLinkedList(ListNodeHelper.GetListNodeFromList([1,2,3,4,5]))
