@@ -1,6 +1,4 @@
-from Medium.AsteroidCollision import AsteroidCollision
-from Medium.DecodeString import DecodeString
+from Medium.Dota2Senate import Dota2Senate
 
 if __name__ == '__main__':
-    main = DecodeString("13[a]2[bc]")
-    main = DecodeString("3[a2[c]]")
+    main = Dota2Senate("DRRDRDRDRDDRDRDR")
