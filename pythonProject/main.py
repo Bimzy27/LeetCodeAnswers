@@ -1,7 +1,6 @@
-from Easy.LeafSimilarTree import LeafSimilarTree
-from Easy.SearchBinarySearchTree import SearchBinarySearchTree
+from ListNode import ListNodeHelper
+from Medium.DeleteMiddleNodeLinkedList import DeleteMiddleNodeLinkedList
 from TreeNode import TreeNodeHelper
 
 if __name__ == '__main__':
-    main = SearchBinarySearchTree(
-        TreeNodeHelper.GetTreeNodeFromList([4,2,7,1,3]), 2)
+    main = DeleteMiddleNodeLinkedList(ListNodeHelper.GetListNodeFromList([1,3,4,7,1,2,6]))
