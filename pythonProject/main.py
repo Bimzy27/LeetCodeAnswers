@@ -1,5 +1,5 @@
 from ListNode import ListNodeHelper
-from Medium.OddEvenLinkedList import OddEvenLinkedList
+from Medium.MaxTwinSumLinkedList import MaxTwinSumLinkedList
 
 if __name__ == '__main__':
-    main = OddEvenLinkedList(ListNodeHelper.GetListNodeFromList([1,2,3,4,5]))
+    main = MaxTwinSumLinkedList(ListNodeHelper.GetListNodeFromList([5, 4, 2, 1]))
