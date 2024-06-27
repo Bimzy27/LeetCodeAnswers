@@ -1,5 +1,5 @@
-from ListNode import ListNodeHelper
-from Medium.MaxTwinSumLinkedList import MaxTwinSumLinkedList
+from Medium.CountGoodNodesBinaryTree import CountGoodNodesBinaryTree
+from TreeNode import TreeNodeHelper
 
 if __name__ == '__main__':
-    main = MaxTwinSumLinkedList(ListNodeHelper.GetListNodeFromList([5, 4, 2, 1]))
+    main = CountGoodNodesBinaryTree(TreeNodeHelper.GetTreeNodeFromList([9,None,3,6]))

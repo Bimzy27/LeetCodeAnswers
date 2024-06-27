@@ -20,15 +20,15 @@ class TreeNodeHelper:
         while queue and i < len(nums):
             current_node = queue.popleft()
             # Check if there are elements left for left and right children
-            if i < len(nums):
-                left_child = TreeNode(nums[i]) if nums[i] else None
+            if i < len(nums) and nums[i] is not None:  # Check for non-None value
+                left_child = TreeNode(nums[i])
                 current_node.left = left_child
                 queue.append(left_child)
-                i += 1
-            if i < len(nums):
-                right_child = TreeNode(nums[i]) if nums[i] else None
+            i += 1
+            if i < len(nums) and nums[i] is not None:  # Check for non-None value
+                right_child = TreeNode(nums[i])
                 current_node.right = right_child
                 queue.append(right_child)
-                i += 1
+            i += 1
 
         return root
