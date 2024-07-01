@@ -1,7 +1,5 @@
-from Medium.BinaryTreeRightSideView import BinaryTreeRightSideView
-from Medium.DeleteNodeBST import DeleteNodeBST
-from Medium.MaximumLevelSumBinaryTree import MaximumLevelSumBinaryTree
+from Medium.KeysAndRooms import KeysAndRooms
 from TreeNode import TreeNodeHelper
 
 if __name__ == '__main__':
-    main = DeleteNodeBST(TreeNodeHelper.GetTreeNodeFromList([5,3,6,2,4,None,7]), 3)
+    main = KeysAndRooms([[1],[2],[3],[]])
