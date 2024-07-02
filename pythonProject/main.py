@@ -1,6 +1,7 @@
-from Medium.ReorderRoutesMakeAllPathsLeadCityZero import ReorderRoutesMakeAllPathsLeadCityZero
+from Easy.SingleNumber import SingleNumber
+from Medium.EvaluateDivision import EvaluateDivision
 from TreeNode import TreeNodeHelper
 
 if __name__ == '__main__':
-    main = ReorderRoutesMakeAllPathsLeadCityZero(5, [[4,3],[2,3],[1,2],[1,0]])
-    main = ReorderRoutesMakeAllPathsLeadCityZero(5, [[1,0],[1,2],[3,2],[3,4]])
+    #main = EvaluateDivision([["a","e"],["b","e"]], [4.0,3.0], [["a","b"],["e","e"],["x","x"]])
+    main = SingleNumber([4,1,2,1,2])
