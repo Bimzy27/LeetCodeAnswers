@@ -1,7 +1,7 @@
-from Hard.MedianTwoSortedArray import MedianTwoSortedArray
-from Medium.EvaluateDivision import EvaluateDivision
-from Medium.ReverseInteger import ReverseInteger
+from Easy.IndexFirstOccurenceInString import IndexFirstOccurenceInString
+from Medium.NearestExitFromMazeEntrance import NearestExitFromMazeEntrance
 from TreeNode import TreeNodeHelper
 
 if __name__ == '__main__':
-    main = EvaluateDivision([["a","b"],["b","c"]], [2.0,3.0], [["a","c"],["b","a"],["a","e"],["a","a"],["x","x"]])
+    #main = NearestExitFromMazeEntrance([["+","+","+"],[".",".","."],["+","+","+"]], [1,0])
+    main = IndexFirstOccurenceInString("sadbutsad", "sad")
