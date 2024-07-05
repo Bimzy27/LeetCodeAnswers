@@ -3,5 +3,4 @@ from Medium.NearestExitFromMazeEntrance import NearestExitFromMazeEntrance
 from TreeNode import TreeNodeHelper
 
 if __name__ == '__main__':
-    #main = NearestExitFromMazeEntrance([["+","+","+"],[".",".","."],["+","+","+"]], [1,0])
-    main = IndexFirstOccurenceInString("sadbutsad", "sad")
+    main = NearestExitFromMazeEntrance([["+","+","+"],[".",".","."],["+","+","+"]], [1,0])

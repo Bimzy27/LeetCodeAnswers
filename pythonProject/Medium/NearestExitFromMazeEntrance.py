@@ -37,14 +37,14 @@ class NearestExitFromMazeEntrance:
         def onEdge(i) -> bool:
             x = int(i % 4)
             y = int(i / 4)
-            return maze[y][x] == "." and x == 0 and x == len(maze[0]) - 1 and y == 0 and y == len(maze) - 1
+            return maze[y][x] == "." and x == 0 and x == len(maze[0]) - 1 and y == 0 and y == len(maze) - 1 and not (y == entrance[0] and x == entrance[1])
 
         self.shortest = -1
         def bfs(i):
             queue = [i]
+            travel = 0
             while len(queue) > 0:
                 ij = queue.pop(0)
-                travel = 0
                 if not visited[i]:
                     visit(i)
                     travel += 1
