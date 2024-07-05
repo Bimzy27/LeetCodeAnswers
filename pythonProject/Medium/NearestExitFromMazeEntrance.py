@@ -1,3 +1,4 @@
+from collections import deque
 from typing import List
 
 from LogHelper import LogHelper
@@ -10,51 +11,23 @@ class NearestExitFromMazeEntrance:
         LogHelper.PrintOutput(self.nearestExit(maze, entrance))
 
     def nearestExit(self, maze: List[List[str]], entrance: List[int]) -> int:
-        visited = [False] * (len(maze) * len(maze[0]))
+        rows = len(maze)
+        cols = len(maze[0])
 
-        def neighbours(i) -> List[int]:
-            neibs = []
+        queue = deque([(entrance[0], entrance[1], 0)])
+        maze[entrance[0]][entrance[1]] = '+'
 
-            x = int(i % 4)
-            y = int(i / 4)
+        while queue:
+            row, col, count = queue.popleft()
 
-            def tryAdd(x, y):
-                if x >= 0 and x < len(maze[0]) and y >= 0 and y < len(maze):
-                    neibs.append((y * 4) + x)
+            for x, y in [(1, 0), (0, 1), (-1, 0), (0, -1)]:
+                rowY = y + row
+                colX = x + col
 
-            tryAdd(x + 1, y)
-            tryAdd(x, y + 1)
-            tryAdd(x - 1, y)
-            tryAdd(x, y - 1)
+                if 0 <= rowY < rows and 0 <= colX < cols and maze[rowY][colX] == ".":
+                    if (rowY == 0 or rowY == rows - 1) or (colX == 0 or colX == cols - 1):
+                        return count + 1
+                    maze[rowY][colX] = "+"
+                    queue.append((rowY, colX, count + 1))
 
-            print(neibs)
-
-            return neibs
-
-        def visit(i):
-            visited[i] = True
-
-        def onEdge(i) -> bool:
-            x = int(i % 4)
-            y = int(i / 4)
-            return maze[y][x] == "." and x == 0 and x == len(maze[0]) - 1 and y == 0 and y == len(maze) - 1 and not (y == entrance[0] and x == entrance[1])
-
-        self.shortest = -1
-        def bfs(i):
-            queue = [i]
-            travel = 0
-            while len(queue) > 0:
-                ij = queue.pop(0)
-                if not visited[i]:
-                    visit(i)
-                    travel += 1
-                    for j, num in enumerate(neighbours(i)):
-                        if not visited[j]:
-                            queue.append(j)
-                            self.shortest = max(travel, self.shortest)
-                            if onEdge(j):
-                                break
-
-        bfs((entrance[0] * 4) + entrance[1])
-
-        return self.shortest
+        return -1

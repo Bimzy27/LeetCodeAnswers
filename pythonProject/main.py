@@ -5,4 +5,4 @@ from TreeNode import TreeNodeHelper
 
 if __name__ == '__main__':
     #main = NearestExitFromMazeEntrance([["+","+","+"],[".",".","."],["+","+","+"]], [1,0])
-    main = StringToInteger("  +  413")
+    main = NearestExitFromMazeEntrance([["+","+","+"],[".",".","."],["+","+","+"]], [1,0])
