@@ -46,6 +46,6 @@ class RottingOranges:
                     queue.append((row, col))
             else:
                 consumingOranges = False
-        if oranges != 0:
-            return -1
+            if oranges != 0:
+                return -1
         return minutes
