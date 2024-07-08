@@ -1,4 +1,4 @@
-from pythonProject.LogHelper import LogHelper
+from LogHelper import LogHelper
 
 
 class SqrtX:
@@ -7,20 +7,13 @@ class SqrtX:
         LogHelper.PrintOutput(self.mySqrt(x))
 
     def mySqrt(self, x: int) -> int:
+        l, r = 0, x
 
-        last2 = int(x)
-        last1 = int(x * 0.5)
+        while l < r:
+            m = (l + r) // 2
+            if m*m < x:
+                l = m + 1
+            elif m*m > x:
+                r = m - 1
 
-        while True:
-            pow = last1^2
-            if pow == x:
-                return last1
-            elif pow < x:
-                last2 = last1
-                last1 = int(last1 * 0.5)
-            else:
-                last2 = last1
-                last1 = int(last2 + (last1 * 0.5))
-
-            if last1 == last2:
-                return last1
+        return r
