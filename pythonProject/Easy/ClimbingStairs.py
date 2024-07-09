@@ -1,4 +1,4 @@
-from pythonProject.LogHelper import LogHelper
+from LogHelper import LogHelper
 
 
 class ClimbingStairs:
@@ -11,7 +11,7 @@ class ClimbingStairs:
         if n >= 2:
             sum += 1
             sum += self.climbStairs(n - 2)
-        elif n >= 1:
+        if n >= 1:
             sum += 1
             sum += self.climbStairs(n - 1)
         return sum
