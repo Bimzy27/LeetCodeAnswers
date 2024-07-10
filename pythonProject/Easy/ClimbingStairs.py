@@ -7,11 +7,25 @@ class ClimbingStairs:
         LogHelper.PrintOutput(self.climbStairs(n))
 
     def climbStairs(self, n: int) -> int:
-        sum = 0
-        if n >= 2:
-            sum += 1
-            sum += self.climbStairs(n - 2)
-        if n >= 1:
-            sum += 1
-            sum += self.climbStairs(n - 1)
-        return sum
+        self.sums = 0
+        self.numsDict = dict()
+
+        def climb(n: int) -> int:
+            if self.numsDict.__contains__(n):
+                self.sums += self.numsDict[n]
+            else:
+                locSum = 0
+                if n == 0:
+                    locSum += 1
+                    self.sums += 1
+                if n >= 2:
+                    locSum += climb(n - 2)
+                if n >= 1:
+                    locSum += climb(n - 1)
+                if not self.numsDict.__contains__(n):
+                    self.numsDict[n] = locSum
+            return self.numsDict[n]
+
+        climb(n)
+
+        return self.sums
