@@ -1,5 +1,6 @@
 from Medium.FindPeakElement import FindPeakElement
+from Medium.KoKoEatingBananas import KoKoEatingBananas
 
 if __name__ == '__main__':
-    main = FindPeakElement([1])
+    main = KoKoEatingBananas([3,6,7,11], 8)
 
