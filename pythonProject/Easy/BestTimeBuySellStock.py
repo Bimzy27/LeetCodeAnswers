@@ -9,15 +9,12 @@ class BuySellStock:
         LogHelper.PrintOutput(self.maxProfit(prices))
 
     def maxProfit(self, prices: List[int]) -> int:
+        profit = 0
+        buy = prices[0]
+        for sell in prices[1:]:
+            if sell > buy:
+                profit = max(profit, sell - buy)
+            else:
+                buy = sell
 
-        def backtrack(nums) -> int:
-            if len(nums) <= 1:
-                return 0
-            maxi = 0
-            for i, n in enumerate(nums[:-1]):
-                if nums[-1] - n > maxi:
-                    maxi = nums[-1] - n
-            maxi = max(maxi, backtrack(nums[:-1]))
-            return maxi
-
-        return backtrack(prices)
+        return profit
