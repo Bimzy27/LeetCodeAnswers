@@ -13,7 +13,7 @@ class LinkedListCycle:
         fast = head
         slow = head
 
-        while fast.next != None:
+        while fast and fast.next:
             fast = fast.next.next
             slow = slow.next
 
