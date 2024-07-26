@@ -11,20 +11,20 @@ class CombinationSumIII:
 
     def combinationSum3(self, k: int, n: int) -> List[List[int]]:
         out = []
-        def backtrack(nums, i):
-            if len(nums) == k:
-                nSum = sum(nums)
-                if nSum == n:
-                    nums = sorted(nums)
-                    out.append(nums)
-                elif nSum < n:
-                    backtrack(nums[:k - 1], i)
-            else:
-                for j in range(9 - i):
-                    backtrack(nums, j+i)
-                nums.append(i)
-                backtrack(nums, i + 1)
+        def backtrack(nums, next: int):
+            if nums.__contains__(next):
+                return
+            nums.append(next)
+            if len(nums) >= k:
+                if sum(nums) == n:
+                    nums.sort()
+                    if not out.__contains__(nums):
+                        out.append(nums)
+                return
+            for i in range(9):
+                backtrack(nums.copy(), i + 1)
 
-            backtrack([], i+1)
+        for i in range(9):
+            backtrack([], i + 1)
 
         return out
