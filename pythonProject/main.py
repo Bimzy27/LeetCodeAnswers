@@ -1,5 +1,6 @@
 from Easy.BestTimeBuySellStock import BuySellStock
 from Easy.IntersectionTwoLinkedLists import IntersectionTwoLinkedLists
+from Easy.ReverseBits import ReverseBits
 from Easy.ValidPalindrome import ValidPalindrome
 from ListNode import ListNodeHelper
 from Medium.CombinationSumIII import CombinationSumIII
@@ -14,4 +15,4 @@ from Medium.UniquePaths import UniquePaths
 from TreeNode import TreeNodeHelper
 
 if __name__ == '__main__':
-    main = UniquePaths(3, 2)
+    main = ReverseBits(3412)
