@@ -2,7 +2,6 @@ from typing import List
 
 from LogHelper import LogHelper
 
-
 class AlternatingGroupsII:
     def __init__(self, colors: List[int], k: int):
         LogHelper.PrintInput(colors)

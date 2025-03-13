@@ -3,6 +3,7 @@ from Easy.MinRecolorsGetKConsecutiveBlackBlocks import MinRecolorsGetKConsecutiv
 from Easy.SummaryRanges import SummaryRanges
 from Hard.SudokuSolver import SudokuSolver
 from Medium.AlternatingGroupsII import AlternatingGroupsII
+from Medium.CountSubstringContainingEveryVowelKConstanantsII import CountSubstringContainingEveryVowelKConstanantsII
 from Medium.CountTotalNumberColoredCells import CountTotalNumberColoredCells
 from TreeNode import TreeNodeHelper
 
@@ -17,4 +18,4 @@ if __name__ == '__main__':
     #     [".","6",".",".",".",".","2","8","."],
     #     [".",".",".","4","1","9",".",".","5"],
     #     [".",".",".",".","8",".",".","7","9"]])
-    main = AlternatingGroupsII([0,1,0], 3)
+    main = CountSubstringContainingEveryVowelKConstanantsII("aadieuoh", 1)
